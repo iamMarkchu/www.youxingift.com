@@ -1,0 +1,29 @@
+html, body{
+    height: 100%;
+}
+
+.youxin-navbar {
+
+}
+
+.youxin-navbar>.navbar-nav>li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-right: 2px solid #e0e0e0;
+}
+.youxin-navbar>.navbar-nav>li:last-child {
+    border-right: none;
+}
+.youxin-navbar>.navbar-nav>li>a {
+    padding: 0;
+}
+
+.footer-block {
+    color: #fff;
+    background-color: #000;
+    height: 200px;
+}
+
+.img-card {
+    margin-bottom: 3rem;
+}
