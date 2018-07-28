@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                <img src="{{asset('logo.png')}}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
                         <a class="nav-link @if(Route::currentRouteName() == 'index')active @endif" href="{{route('index')}}">首页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'none')active @endif" href="#">关于</a>
+                        <a class="nav-link" href="{{url('/#about-us')}}">关于我们</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @if(Route::currentRouteName() == 'products')active @endif" href="{{route('products')}}">产品展示</a>
@@ -41,7 +41,7 @@
                         <a class="nav-link @if(Route::currentRouteName() == 'messages')active @endif" href="{{route('messages')}}">在线留言</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'none')active @endif" href="#">联系我们</a>
+                        <a class="nav-link @if(Route::currentRouteName() == 'none')active @endif" href="javascrip:;" data-toggle="popover" data-placement="bottom" data-content="<div class='text-center'><h5>通过微信联系我们</h5><img class='img-fluid' src='/qrcode.jpg' /></div>">联系我们</a>
                     </li>
                 </ul>
             </div>
@@ -77,19 +77,31 @@
     @endif
 
     @if(Route::currentRouteName() == 'messages')
-        <img src="http://www.huirongtoys.com/imageRepository/967fd468-27e3-4a38-810d-80d9954363fd.jpg" alt="">
+        <div id="banner">
+            <img src="http://www.huirongtoys.com/imageRepository/967fd468-27e3-4a38-810d-80d9954363fd.jpg" alt="" class="img-fluid">
+        </div>
     @endif
     <main class="py-4">
         @yield('content')
     </main>
     <footer class="footer-block">
         <div class="container">
-            <p>尾部</p>
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>优信礼品有限公司    版权所有   粤ICP备18089420号</p>
+                    <p>宋磊倾情打造</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p>服务热线：13590102784 16620616156 15626502455 15927423860</p>
+                    <p>电子邮箱：<a href="mailto:youxingift@outlook.com">youxingift@outlook.com</a> | <a href="mailto:youxingiftjohn@outlook.com">youxingiftjohn@outlook.com</a></p>
+                </div>
+            </div>
         </div>
     </footer>
 </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('tmp.js') }}"></script>
 </body>
 </html>

@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('client.index');
-})->name('index');
-
+Route::get('/', 'IndexController@index')->name('index');
 Route::get('/products', 'ProductController@index')->name('products');
 Route::get('/messages', 'MessageController@index')->name('messages');
 Route::post('/messages', 'MessageController@store')->name('message-store');
@@ -22,3 +19,16 @@ Route::post('/messages', 'MessageController@store')->name('message-store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+    Route::get('/', 'HomeController@index')->name('admin-index');
+
+    Route::get('/products', 'ProductController@index')->name('admin-products');
+    Route::get('/products/create', 'ProductController@create')->name('admin-products-create');
+    Route::post('/products', 'ProductController@store')->name('admin-products-store');
+    Route::get('/products/delete/{id}', 'ProductController@delete')->name('admin-products-delete');
+
+    Route::get('/messages', 'MessageController@index')->name('admin-messages');
+    Route::get('/users', 'UserController@index')->name('admin-users');
+    Route::get('/users/{id}/{action}', 'UserController@status')->name('admin-users-status');
+});

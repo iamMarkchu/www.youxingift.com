@@ -1,5 +1,8 @@
-html, body{
+html, body, #app{
     height: 100%;
+}
+.navbar-laravel {
+    border-top: 3px solid #3399cc;
 }
 
 .youxin-navbar {
@@ -9,7 +12,7 @@ html, body{
 .youxin-navbar>.navbar-nav>li {
     padding-left: 2rem;
     padding-right: 2rem;
-    border-right: 2px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
 }
 .youxin-navbar>.navbar-nav>li:last-child {
     border-right: none;
@@ -21,9 +24,20 @@ html, body{
 .footer-block {
     color: #fff;
     background-color: #000;
-    height: 200px;
 }
 
 .img-card {
     margin-bottom: 3rem;
+}
+
+.index-block {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.index-block h2 {
+    margin-bottom: 2rem;
+}
+
+.footer-block {
+    padding: 2rem;
 }

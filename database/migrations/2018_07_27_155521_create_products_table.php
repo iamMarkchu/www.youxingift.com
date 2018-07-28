@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->default(0);
             $table->string('name')->default('');
             $table->string('img_url')->default('');
+            $table->tinyInteger('display_order')->default(99);
+            $table->tinyInteger('status')->default(1);
             $table->text('description')->nullable();
             $table->timestamps();
         });
