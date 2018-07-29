@@ -88,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left">
-                    <p>优信礼品有限公司    版权所有   粤ICP备18089420号</p>
+                    <p>深圳市攸信礼品有限公司    版权所有   粤ICP备18089420号</p>
                     <p>宋磊倾情打造</p>
                 </div>
                 <div class="col-md-6 text-right">
