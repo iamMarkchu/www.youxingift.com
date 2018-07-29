@@ -30,7 +30,7 @@ class IndexController extends Controller
     public function index(Request $request)
     {
         $map = [];
-        $products = $this->product->fetchList($map, $request->input('size', 30), ['display_order', 'asc']);
+        $products = $this->product->fetchList($map, $request->input('size', 6), ['display_order', 'asc']);
         return view('client.index', compact('products'));
     }
 }
