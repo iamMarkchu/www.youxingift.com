@@ -39,5 +39,6 @@ html, body, #app{
 }
 
 .footer-block {
+    font-family: sans-serif;
     padding: 2rem;
 }
