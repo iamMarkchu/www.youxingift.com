@@ -194,4 +194,6 @@ return [
 
     'same_site' => null,
 
+    // 保持语言设置的key
+    'locale_cookie' => 'locale',
 ];

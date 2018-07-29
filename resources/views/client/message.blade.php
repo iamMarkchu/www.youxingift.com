@@ -23,26 +23,26 @@
                         <form method="post" action="{{route('message-store')}}">
                             @csrf
                             <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">留言内容</label>
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">{{__('client.message_content')}}</label>
                                 <div class="col-sm-10">
-                                    <textarea name="content" id="" cols="20" rows="5" class="form-control" placeholder="请输入内容...."></textarea>
+                                    <textarea name="content" id="" cols="20" rows="5" class="form-control" placeholder="{{__('client.message_content_placeholder')}}"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">您的尊姓大名</label>
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">{{__('client.message_name')}}</label>
                                 <div class="col-sm-10">
-                                    <input name="name" type="text" class="form-control" placeholder="名字">
+                                    <input name="name" type="text" class="form-control" placeholder="{{__('client.message_name_placeholder')}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">您的电话</label>
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">{{__('client.message_mobile')}}</label>
                                 <div class="col-sm-10">
-                                    <input name="mobile" type="text" class="form-control" id="inputEmail3" placeholder="电话">
+                                    <input name="mobile" type="text" class="form-control" id="inputEmail3" placeholder="{{__('client.message_mobile_placeholder')}}">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-10 offset-2">
-                                    <button type="submit" class="btn btn-primary">提交</button>
+                                    <button type="submit" class="btn btn-primary">{{__('client.submit')}}</button>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

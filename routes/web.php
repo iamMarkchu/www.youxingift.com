@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', 'IndexController@index')->name('index');
-Route::get('/products', 'ProductController@index')->name('products');
-Route::get('/messages', 'MessageController@index')->name('messages');
-Route::post('/messages', 'MessageController@store')->name('message-store');
+Route::group(['middleware' => ['checkLocale']], function () {
+    Route::get('/', 'IndexController@index')->name('index');
+    Route::get('/setLocale', 'IndexController@setLocale');
+    Route::get('/products', 'ProductController@index')->name('products');
+    Route::get('/messages', 'MessageController@index')->name('messages');
+    Route::post('/messages', 'MessageController@store')->name('message-store');
+    Route::get('/contact-us', 'IndexController@contact')->name('contact-us');
+});
 
 Auth::routes();
 

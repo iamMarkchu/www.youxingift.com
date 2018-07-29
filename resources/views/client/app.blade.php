@@ -27,21 +27,26 @@
 
             <div class="collapse navbar-collapse youxin-navbar" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link @if(Route::currentRouteName() == 'index')active @endif" href="{{route('index')}}">{{__('client.homepage')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/#about-us')}}">{{__('client.about_us')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if(Route::currentRouteName() == 'products')active @endif" href="{{route('products')}}">{{__('client.products')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if(Route::currentRouteName() == 'messages')active @endif" href="{{route('messages')}}">{{__('client.messages')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if(Route::currentRouteName() == 'contact-us')active @endif" href="{{route('contact-us')}}">{{__('client.contact_us')}}</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'index')active @endif" href="{{route('index')}}">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/#about-us')}}">关于我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'products')active @endif" href="{{route('products')}}">产品展示</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'messages')active @endif" href="{{route('messages')}}">在线留言</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'none')active @endif" href="javascrip:;" data-toggle="popover" data-placement="bottom" data-content="<div class='text-center'><h5>通过微信联系我们</h5><img class='img-fluid' src='/qrcode.jpg' /></div>">联系我们</a>
+                        <a class="nav-link" href="{{url('/setLocale')}}">中文/ENGLISH</a>
                     </li>
                 </ul>
             </div>
@@ -88,12 +93,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left">
-                    <p>深圳市攸信礼品有限公司    版权所有   粤ICP备18089420号</p>
-                    <p>宋磊倾情打造</p>
+                    <p>{{__('client.company_name')}}    {{__('client.copy_rights')}}   粤ICP备18089420号</p>
+                    <p>{{__('client.powered')}}</p>
                 </div>
                 <div class="col-md-6 text-right">
-                    <p>服务热线：13590102784 16620616156 15626502455 15927423860</p>
-                    <p>电子邮箱：<a href="mailto:youxingift@outlook.com">youxingift@outlook.com</a> | <a href="mailto:youxingiftjohn@outlook.com">youxingiftjohn@outlook.com</a></p>
+                    <p>{{__('client.mobile')}}：13590102784 16620616156 15626502455 15927423860</p>
+                    <p>{{__('client.email')}}：<a href="mailto:youxingift@outlook.com">youxingift@outlook.com</a> | <a href="mailto:youxingiftjohn@outlook.com">youxingiftjohn@outlook.com</a></p>
                 </div>
             </div>
         </div>
