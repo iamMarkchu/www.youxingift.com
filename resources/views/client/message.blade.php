@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-10 offset-2">
-                                    <button type="submit" class="btn btn-primary">{{__('client.submit')}}</button>
+                                    <button type="submit" class="btn btn-primary">{{__('client.message_submit')}}</button>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

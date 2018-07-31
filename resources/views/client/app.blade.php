@@ -61,13 +61,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="http://www.huirongtoys.com/imageRepository/284eb2ed-5c5e-4cda-b185-59c3c23ee99f.jpg" alt="First slide">
+                <img class="d-block w-100" src="{{asset('lunbo11.jpg')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="http://www.huirongtoys.com/imageRepository/4dfabdde-8166-45b1-8d22-36eaf7621951.jpg" alt="Second slide">
+                <img class="d-block w-100" src="{{asset('lunbo22.jpg')}}" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="http://www.huirongtoys.com/imageRepository/2f211d59-3d79-4eac-9899-4ba8be84f923.jpg" alt="Third slide">
+                <img class="d-block w-100" src="{{asset('lunbo33.jpg')}}" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -83,7 +83,7 @@
 
     @if(Route::currentRouteName() == 'messages')
         <div id="banner">
-            <img src="http://www.huirongtoys.com/imageRepository/967fd468-27e3-4a38-810d-80d9954363fd.jpg" alt="" class="img-fluid">
+            <img src="{{asset('message_banner.jpg')}}" alt="" class="img-fluid">
         </div>
     @endif
     <main class="py-4">

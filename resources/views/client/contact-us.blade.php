@@ -11,7 +11,7 @@
                         <p class="lead">{{__('client.email')}}：<a href="mailto:youxingift@outlook.com">youxingift@outlook.com</a> | <a href="mailto:youxingiftjohn@outlook.com">youxingiftjohn@outlook.com</a></p>
                         <p class="lead">{{__('client.contact_user_key')}}: {{__('client.contact_user_value')}}</p>
                         <p class="lead">{{__('client.address_key')}}: {{__('client.address_value')}}</p>
-                        <p class="lead">{{__('client.wechat')}}: <img src="{{asset('qrcode.jpg')}}" class="img-fluid" alt="" width="200"></p>
+                        <p class="lead">{{__('client.wechat')}}: <img src="{{asset('qrcode.jpg')}}" class="img-fluid" alt="" width="200"><img src="{{asset('qrcode2.jpg')}}" class="img-fluid" alt="" width="200"></p>
                     </div>
                 </div>
             </div>
